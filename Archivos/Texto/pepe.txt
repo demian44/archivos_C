@@ -1,0 +1,2 @@
+Texto escrito exitosamente con fwrite
+flotante: 45.5
