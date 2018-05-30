@@ -49,18 +49,8 @@ int main()
         getchar();
 
         /// Escribo los datos con fprintf
-        int cLeidos = fprintf(pArchivo,"\n%s %.1f","flotante:",45.5);
-
-        sprintf(texto,"\n%s %.1f","flotante:",45.5);
-
-        if(cLeidos == strlen(texto))
-        {
-            printf("\n\nSe escribio todo el texto con fprintf");
-        }
-        else
-        {
-            printf("\n\nNo se pudo guardar todo el texto");
-        }
+        fprintf(pArchivo,"\n%s %.1f","flotante:",45.5);
+        printf("\n\nSe escribio todo el texto con fprintf");
 
         if(!fclose(pArchivo))
             printf("\n\nArchivo cerrado");
@@ -82,7 +72,7 @@ int main()
     {
         printf("Se abrio para leer");
        /* printf("\n");
-        int datosLeidos = fread(buffer,sizeof(char),10,pArchivo);
+        int datosLeidos = fread(buffer,sizeof(char),1024,pArchivo);
         if(datosLeidos == 10)
         {
             printf("\nTramo leido: %s\n",buffer);
@@ -91,14 +81,14 @@ int main()
         {
             printf("No se pudo leer el archivo.");
         }
-        getchar();
+        getchar();*/
 
-        printf("\n");*/
+        printf("\n");
 
         while(!feof(pArchivo))
         {
             ///fgets lee hasta encontrar un salto linea o el final del archivo
-            fgets(buffer,1023,pArchivo);
+            fgets(buffer,1024,pArchivo);
             printf("\nTramo leido: %s\n",buffer);
 
             getchar();

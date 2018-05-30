@@ -6,7 +6,7 @@ int main()
 {
     FILE* pArchivo;
 
-    pArchivo = fopen("pepe.txt","r+");
+    pArchivo = fopen("pepe.txt","r");
     char valor[51];
     char key[51];
 
